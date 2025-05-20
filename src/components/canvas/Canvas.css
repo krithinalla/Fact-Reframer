@@ -1,0 +1,10 @@
+#main-canvas {
+  width: 100%;
+  height: 100%;
+  display: block; /* Prevents extra space below canvas */
+  /* background-color: #f0f0f0; */ /* Replaced with dotted pattern */
+  background-color: #ffffff; /* Base color for the background */
+  background-image: radial-gradient(#cccccc 1px, transparent 1px);
+  background-size: 16px 16px; /* Adjusts the spacing of the dots */
+  background-position: -8px -8px; /* Centers the pattern */
+} 

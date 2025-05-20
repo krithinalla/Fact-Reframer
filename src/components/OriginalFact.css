@@ -1,0 +1,24 @@
+.original-fact-container {
+  background-color: #4836C0;
+  color: #fff;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  width: 80%;
+  max-width: 700px;
+  min-width: 220px;
+  box-sizing: border-box;
+  word-break: break-word;
+  box-shadow: 0 2px 8px rgba(72, 54, 192, 0.08);
+}
+
+@media (max-width: 600px) {
+  .original-fact-container {
+    width: 98%;
+    padding: 1.2rem 0.7rem;
+    font-size: 1rem;
+  }
+} 

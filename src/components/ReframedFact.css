@@ -1,0 +1,47 @@
+.reframed-fact-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  width: 70%;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  position: relative;
+  padding-top: 25px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lens-badge {
+  display: inline-block;
+  background-color: white;
+  border: 1px solid #4836C0;
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  color: #4f46e5;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 45px;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.reframed-fact {
+  background-color: #FFF4F4;
+  padding: 2rem;
+  padding-top: 2.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4836C0;
+} 

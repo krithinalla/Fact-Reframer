@@ -1,0 +1,46 @@
+.fact-display {
+  background-color: #4f46e5;
+  color: white;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 0;
+  min-height: 120px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fact-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.error {
+  color: #ffcccc;
+  font-weight: 500;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Loading style kept for reference but not used anymore */
+.loading {
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+} 

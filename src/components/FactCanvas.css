@@ -1,0 +1,157 @@
+.fact-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  user-select: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.canvas-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 10000px;
+  height: 10000px;
+  transform-origin: 0 0;
+  background-image: radial-gradient(circle, #9ca3af 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  margin-left: -5000px;
+  margin-top: -5000px;
+}
+
+.canvas-content {
+  position: absolute;
+  transform-origin: center;
+  transition: transform 0.1s ease;
+  z-index: 1;
+}
+
+.fact-thread {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.fact-branches {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.fact-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.branch-line {
+  width: 2px;
+  height: 50px;
+  background-color: #d1d5db;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.branch-line:before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  background-color: #d1d5db;
+  transform: translateX(-50%);
+}
+
+.canvas-controls {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 100;
+  background-color: white;
+  border-radius: 25px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.canvas-controls button {
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.canvas-controls button:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+.canvas-info {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Remove the white background from behind reframed facts */
+.fact-canvas .reframed-fact-container {
+  background-color: transparent;
+  box-shadow: none;
+  transform-origin: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fact-canvas .reframed-fact-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .canvas-info {
+    display: none;
+  }
+  
+  .canvas-controls {
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+} 
